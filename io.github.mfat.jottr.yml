@@ -51,6 +51,6 @@ modules:
       - type: git
         url: "https://github.com/mfat/jottr.git"
         tag: v1.4.3
-        commit: ae78bb0d7f35e8ed49ad3e3d510cb569d86c16e2
+        commit: cf915108df28f97763f4adf19725db74b89615d4
       - type: file
         path: jottr.sh
