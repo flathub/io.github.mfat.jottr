@@ -1,9 +1,9 @@
 app-id: io.github.mfat.jottr
 runtime: org.kde.Platform
-runtime-version: '5.15-24.08'
+runtime-version: '5.15-25.08'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '5.15-24.08'
+base-version: '5.15-25.08'
 command: jottr
 separate-locales: false
 cleanup-commands:
@@ -39,17 +39,12 @@ modules:
       - cp -r src/jottr/* /app/share/jottr/
       - install -D -m755 jottr.sh /app/bin/jottr
       - install -D -m644 io.github.mfat.jottr.desktop -t /app/share/applications/
-      - install -D icons/jottr_icon_16x16.png /app/share/icons/hicolor/16x16/apps/io.github.mfat.jottr.png
-      - install -D icons/jottr_icon_32x32.png /app/share/icons/hicolor/32x32/apps/io.github.mfat.jottr.png
-      - install -D icons/jottr_icon_48x48.png /app/share/icons/hicolor/48x48/apps/io.github.mfat.jottr.png
-      - install -D icons/jottr_icon_64x64.png /app/share/icons/hicolor/64x64/apps/io.github.mfat.jottr.png
-      - install -D icons/jottr_icon_128x128.png /app/share/icons/hicolor/128x128/apps/io.github.mfat.jottr.png
       - install -D icons/jottr_icon_256x256.png /app/share/icons/hicolor/256x256/apps/io.github.mfat.jottr.png
       - install -D icons/jottr_icon_512x512.png /app/share/icons/hicolor/512x512/apps/io.github.mfat.jottr.png
       - install -D -m644 io.github.mfat.jottr.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: "https://github.com/mfat/jottr.git"
+        url: https://github.com/mfat/jottr.git
         tag: v1.4.3
         commit: 6b3e9a7b43ec09e43c09dcd7014b65db3adf5a4c
       - type: file
