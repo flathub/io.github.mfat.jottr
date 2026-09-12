@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.mfat.jottr</id>
+  
+  <name>Jottr</name>
+  <summary>Simple text and markdown editor mainly intended for writers, journalists and researchers</summary>
+  
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <description>
+    <p>
+      A simple, opinionated plain text and markdown editor designed for writers, journalists and researchers. Jottr has features like distraction-free writing, an integrated web-browser, customizable site-specific search from the context menu and smart auto-completion from saved snippets.
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">io.github.mfat.jottr.desktop</launchable>
+
+  <!-- Required fields -->
+  <url type="homepage">https://github.com/mfat/jottr</url>
+  <developer_name>mFat</developer_name>
+  <content_rating type="oars-1.1"/>
+
+  <!-- Release information -->
+  <releases>
+    <release version="2.5.3" date="2026-09-13">
+      <description>
+        <p>Bug fixes and improvements</p>
+      </description>
+    </release>
+    <release version="2.5.2" date="2026-09-12">
+      <description>
+        <p>Fix AppImage/frozen entry point import crash</p>
+        <p>Remove bundled Adwaita-Qt; simplify package builds</p>
+        <p>Update Flatpak packaging to PyQt6 / KDE 6.11</p>
+      </description>
+    </release>
+  </releases>
+
+   <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/mfat/jottr/6efa97c3c6ec9da26a9f2f98b25d71e089bfa808/screenshots/main.png</image>
+      <caption>Main window of Jottr</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/mfat/jottr/6efa97c3c6ec9da26a9f2f98b25d71e089bfa808/screenshots/editor-themes.png</image>
+      <caption>Editor color themes</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/mfat/jottr/6efa97c3c6ec9da26a9f2f98b25d71e089bfa808/screenshots/browser.png</image>
+      <caption>Site-specific search in the research browser</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/mfat/jottr/6efa97c3c6ec9da26a9f2f98b25d71e089bfa808/screenshots/snippets.png</image>
+      <caption>Snippets and Tab completion</caption>
+    </screenshot>
+  </screenshots>
+</component>
