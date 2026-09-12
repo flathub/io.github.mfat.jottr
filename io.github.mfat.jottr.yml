@@ -17,11 +17,6 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
-  # Follow the host light/dark appearance. Jottr reads color-scheme from the
-  # desktop portal; kdeglobals:ro lets Qt's platform theme agree instead of
-  # falling back to a light Breeze default. (GTK xdg-config peeks are rejected
-  # by flatpak-builder-lint as unnecessary.)
-  - --filesystem=xdg-config/kdeglobals:ro
   - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
   - --env=QTWEBENGINE_DISABLE_SANDBOX=1
 modules:
