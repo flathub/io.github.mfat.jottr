@@ -1,14 +1,17 @@
 app-id: io.github.mfat.jottr
 runtime: org.kde.Platform
-runtime-version: '5.15-25.08'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '5.15-25.08'
+base-version: '6.11'
 command: jottr
 separate-locales: false
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 finish-args:
+  # Open/save/directory pickers use native QFileDialog so Qt can talk to
+  # org.freedesktop.portal.FileChooser. Avoid DontUseNativeDialog and do not
+  # grant broad host filesystem access for those flows.
   - --share=network
   - --share=ipc
   - --socket=wayland
@@ -35,17 +38,17 @@ modules:
   - name: jottr
     buildsystem: simple
     build-commands:
-      - mkdir -p /app/share/jottr
-      - cp -r src/jottr/* /app/share/jottr/
-      - install -D -m755 jottr.sh /app/bin/jottr
-      - install -D -m644 io.github.mfat.jottr.desktop -t /app/share/applications/
-      - install -D icons/jottr_icon_256x256.png /app/share/icons/hicolor/256x256/apps/io.github.mfat.jottr.png
-      - install -D icons/jottr_icon_512x512.png /app/share/icons/hicolor/512x512/apps/io.github.mfat.jottr.png
-      - install -D -m644 io.github.mfat.jottr.metainfo.xml -t /app/share/metainfo/
+      - pip3 install --verbose --prefix=${FLATPAK_DEST} --no-deps --no-build-isolation .
+      - mkdir -p ${FLATPAK_DEST}/share/jottr
+      - cp -r icons ${FLATPAK_DEST}/share/jottr/icons
+      - cp -r translations ${FLATPAK_DEST}/share/jottr/translations
+      - install -D -m644 io.github.mfat.jottr.desktop -t ${FLATPAK_DEST}/share/applications/
+      - install -D -m644 icons/jottr.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/io.github.mfat.jottr.svg
+      - install -D -m644 io.github.mfat.jottr.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
     sources:
       - type: git
         url: https://github.com/mfat/jottr.git
-        tag: v1.4.3
-        commit: 6b3e9a7b43ec09e43c09dcd7014b65db3adf5a4c
+        tag: v2.5.3
+        commit: b27732e79691e58192c2d0e9470f73caa6bf5e2c
       - type: file
-        path: jottr.sh
+        path: io.github.mfat.jottr.metainfo.xml
