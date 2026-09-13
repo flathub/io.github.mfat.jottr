@@ -50,4 +50,3 @@ modules:
         url: https://github.com/mfat/jottr.git
         tag: v2.5.3
         commit: b27732e79691e58192c2d0e9470f73caa6bf5e2c
-    
