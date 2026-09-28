@@ -48,5 +48,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/mfat/jottr.git
-        tag: v2.8.0
-        commit: 5e8200cd4b71ed76d5130ed89e705e5eb408a746
+        tag: v3.0.0
+        commit: 9f99e5ef374c0a81e047efc973f4041f18fc8276
